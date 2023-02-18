@@ -1,5 +1,7 @@
-FROM node:19-alpine3.16
+FROM node:lts-alpine
 
+WORKDIR /usr/app
+COPY ./ /usr/app
 RUN npm install
 RUN npm install -g gulp-cli
 
