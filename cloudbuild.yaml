@@ -5,8 +5,8 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: npm
   args: ["build", "--prod"]
-- name: node:19.3.0
-  entrypoint: 'gcr.io/cloud-builders/npm'
+- name: 'gcr.io/cloud-builders/npm'
+  entrypoint: npm
   args :  ["npm", "config", "set", "prefix", "~/npm"]
 - name: bash
   entrypoint: bash
