@@ -1,6 +1,3 @@
-env_variables:
-  GULP_PATH: 'node_modules/gulp/bin/gulp.js'
-
 service_account: cloudbuild@arno-web.iam.gserviceaccount.com
 
 steps:
