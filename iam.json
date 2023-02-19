@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+     "members": [
+       "serviceAccount:arno-web@appspot.gserviceaccount.com"
+       ],
+       "role": "roles/appengine.deployer",
+}
+],
+    "version": 3,
+    "etag": "BwWKmjvelug="
+}

@@ -1,18 +1,32 @@
+env: [
+  'PATH=$PATH:$HOME/npm/bin',
+  ]
+
+service_account: cloudbuild@arno-web.iam.gserviceaccount.com
+
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: npm
   args: ["install"]
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: npm
-  args: ["run", "build", "--prod"]
+  args: ["install", "gulp", "-g"]
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: npm
-  args :  ["config", "set", "prefix", "~/npm"]
+  args: ["run", "build", "--prod"]
 - name: bash
   entrypoint: bash
   args: ['-c', 'export', 'PATH="$$PATH:$$HOME/npm/bin"']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+  redirect_http_response_code: 301
+  # ...
+
 options:
   logging: CLOUD_LOGGING_ONLY
