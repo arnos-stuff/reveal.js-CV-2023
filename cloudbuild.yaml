@@ -21,12 +21,5 @@ steps:
   args: ["app", "deploy"]
 timeout: "1600s"
 
-handlers:
-- url: /.*
-  script: auto
-  secure: always
-  redirect_http_response_code: 301
-  # ...
-
 options:
   logging: CLOUD_LOGGING_ONLY
