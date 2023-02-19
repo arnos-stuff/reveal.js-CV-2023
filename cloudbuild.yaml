@@ -1,0 +1,16 @@
+steps:
+- name: node:19.3.0
+  entrypoint: npm
+  args: ["install"]
+- name: node:19.3.0
+  entrypoint: npm
+  args: ["build", "--prod"]
+- name: node:19.3.0
+  entrypoint: npm
+  args :  ["npm", "config", "set", "prefix", "~/npm"]
+- name: bash
+  entrypoint: bash
+  args: ['-c', 'export', 'PATH="$PATH:$HOME/npm/bin"']
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy"]
+timeout: "1600s"
