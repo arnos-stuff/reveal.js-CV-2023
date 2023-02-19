@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "test": "gulp test",
-    "start": "node ./node_modules/gulp/bin/gulp.js serve",
+    "start": "gulp serve",
     "build": "gulp build",
     "artifactregistry-login": "npx google-artifactregistry-auth"
   },
