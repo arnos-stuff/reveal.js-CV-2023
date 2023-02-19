@@ -7,7 +7,7 @@ steps:
   args: ["build", "--prod"]
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: npm
-  args :  ["npm", "config", "set", "prefix", "~/npm"]
+  args :  ["config", "set", "prefix", "~/npm"]
 - name: bash
   entrypoint: bash
   args: ['-c', 'export', 'PATH="$$PATH:$$HOME/npm/bin"']
