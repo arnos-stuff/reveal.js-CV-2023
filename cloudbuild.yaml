@@ -1,6 +1,5 @@
-env: [
-  'PATH=$PATH:$HOME/npm/bin',
-  ]
+env_variables:
+  BINPATH: '$HOME/npm/bin'
 
 service_account: cloudbuild@arno-web.iam.gserviceaccount.com
 
