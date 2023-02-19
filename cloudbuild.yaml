@@ -10,7 +10,7 @@ steps:
   args :  ["npm", "config", "set", "prefix", "~/npm"]
 - name: bash
   entrypoint: bash
-  args: ['-c', 'export', 'PATH="$PATH:$HOME/npm/bin"']
+  args: ['-c', 'export', 'PATH="$$PATH:$$HOME/npm/bin"']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
