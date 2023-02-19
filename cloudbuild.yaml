@@ -1,5 +1,5 @@
 env_variables:
-  BINPATH: '$HOME/npm/bin'
+  GULP_PATH: 'node_modules/gulp/bin/gulp.js'
 
 service_account: cloudbuild@arno-web.iam.gserviceaccount.com
 
