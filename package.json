@@ -101,5 +101,8 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
+  },
+  "dependencies": {
+    "lazysizes": "^5.3.2"
   }
 }
